@@ -1,0 +1,23 @@
+.cards {
+  position: relative;
+  background-color: rgba(0,0,0,0.07);
+  width: 320px;
+  min-height: 340px;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 50px auto;
+  overflow: hidden;
+  .settings-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:active {
+      transform: scale(0.95);
+    }
+    &:hover {
+      color: #555;
+    }
+  }
+
+}
