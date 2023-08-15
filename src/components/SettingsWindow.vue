@@ -16,7 +16,7 @@
             <span class="line"></span>
             <span class="city-tag__name">{{city}}</span>
           </div>
-          <span class="delete-btn material-symbols-outlined" @click="deleteCity(city)">close</span>
+          <span class="delete-btn material-symbols-outlined" @click="deleteCity">close</span>
         </li>
       </draggable>
     </div>
@@ -70,7 +70,12 @@ export default {
       this.locationValue = ''
     },
     deleteCity (city) {
-      this.$store.commit(mutationTypes.deleteCity, city)
+      const tag = city.target.parentNode
+      tag.classList.add('removed')
+      function deleteCityWeatherObj () {
+        this.$store.commit(mutationTypes.deleteCity, city)
+      }
+      setTimeout(deleteCityWeatherObj, 500)
     }
   },
   components: {

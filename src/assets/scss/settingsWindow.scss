@@ -58,7 +58,7 @@
       justify-content: space-between;
       opacity: 1;
       transition: all .6s ease;
-      &.hidden {
+      &.removed {
         transform: translateX(200%);
         opacity: 0;
       }
